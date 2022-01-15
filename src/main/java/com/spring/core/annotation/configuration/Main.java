@@ -10,6 +10,7 @@ public class Main {
 
 		Vehicle vehicle = context.getBean("car", Vehicle.class);
 		vehicle.drive();
+		System.out.println(vehicle);
 	}
 
 }

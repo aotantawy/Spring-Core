@@ -7,6 +7,21 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<bean id="vehicle" class="com.spring.core.xml.configuration.Truck">
+	<bean id="motor" class="com.spring.core.xml.configuration.Motor">
+		<property name="modelNumber" value="gs3f22" />
+		<property name="horsePower" value="55" />
+	</bean>
+
+	<!-- Constructor Injection -->
+	<bean id="truck" class="com.spring.core.xml.configuration.Truck">
+		<constructor-arg index="0" value="Samy abbas" />
+		<constructor-arg index="1" ref="motor" />
+	</bean>
+
+
+	<!-- Setter Injection -->
+	<bean id="car" class="com.spring.core.xml.configuration.Truck">
+		<property name="driverName" value="John doe" />
+		<property name="motor" ref="motor"></property>
 	</bean>
 </beans>

@@ -8,8 +8,9 @@ public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context-xml.xml");
 
-		Vehicle vehicle = context.getBean("vehicle", Vehicle.class);
+		Vehicle vehicle = context.getBean("car", Vehicle.class);
 		vehicle.drive();
+		System.out.println(vehicle);
 	}
 
 }
