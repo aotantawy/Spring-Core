@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context-annotation.xml");
 
-		Vehicle vehicle = context.getBean("car", Vehicle.class);
+		Vehicle vehicle = context.getBean("truck", Vehicle.class);
 		vehicle.drive();
 		System.out.println(vehicle);
 	}
